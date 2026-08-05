@@ -10,7 +10,7 @@ The metadata contains:
 
 ```cpp
 // @id              chrome-classic-menu-bar
-// @version         1.0.0
+// @version         1.1.0
 // @author          Gokhan
 // @github          GokhanGerkz
 ```
