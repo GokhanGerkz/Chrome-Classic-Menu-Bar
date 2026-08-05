@@ -5,84 +5,127 @@
 [![Language](https://img.shields.io/badge/language-C%2B%2B-blue)](src/chrome-classic-menu-bar.wh.cpp)
 [![Windhawk Mod](https://img.shields.io/badge/Windhawk-mod-4b7bec)](https://windhawk.net/)
 
-A Windhawk mod that adds a native Win32 **File, Edit, View, History, Bookmarks, Tools, and Help** menu bar to Google Chrome.
+A Windhawk mod that adds a native Win32 **File, Edit, View, History, Bookmarks/Favorites, Tools, and Help** menu bar to **Google Chrome** and **Microsoft Edge**.
 
 ## Features
 
-- Native menu bar attached to Chrome browser windows.
-- File, Edit, View, History, Bookmarks, Tools, and Help menus.
+- Native Win32 menu bar integrated into browser windows.
+- Supports **Google Chrome** and **Microsoft Edge** from a single codebase.
+- Automatic runtime detection of Chrome or Edge.
+- Browser-specific handling of internal pages (`chrome://` and `edge://`).
+- File, Edit, View, History, Bookmarks/Favorites, Tools, and Help menus.
 - Dark owner-drawn menu mode with a runtime toggle.
-- Common Chrome keyboard actions and internal Chrome pages.
-- Automatic attachment to existing and newly created Chrome windows.
-- Periodic recovery if Chrome recreates or replaces a browser window.
-- DPI-aware menu sizing and font handling.
-- Windows 10 and Windows 11 compatible design.
+- Standard browser keyboard shortcuts and commands.
+- Automatic attachment to existing browser windows.
+- Automatic attachment to newly created browser windows.
+- Automatic recovery if the browser recreates its native window.
+- High compatibility with modern Chromium releases.
+- Windows 10 and Windows 11 compatible.
+
+## Supported Browsers
+
+- Google Chrome (`chrome.exe`)
+- Microsoft Edge (`msedge.exe`)
 
 ## Requirements
 
 - Windows 10 or Windows 11.
-- Google Chrome (`chrome.exe`).
 - Windhawk.
+- Google Chrome or Microsoft Edge.
 
 ## Install in Windhawk
 
 1. Open Windhawk.
 2. Select **Create a new mod**.
-3. Copy the contents of [`src/chrome-classic-menu-bar.wh.cpp`](src/chrome-classic-menu-bar.wh.cpp).
-4. Replace the editor contents with the copied source.
-5. Select **Compile Mod**, then enable it.
-6. Restart Chrome if the menu bar does not appear immediately.
+3. Copy the contents of `src/chrome-classic-menu-bar.wh.cpp`.
+4. Paste the source into the Windhawk editor.
+5. Click **Compile Mod**.
+6. Enable the mod.
+7. Restart Chrome or Edge if the menu bar does not appear immediately.
 
-## Menu commands
+## Menu Commands
 
-The mod exposes standard browser actions such as new tab, new window, open file, save, print, undo, redo, reload, zoom, full screen, history, bookmarks, downloads, extensions, settings, Chrome help, and About Chrome.
+The mod provides familiar browser commands including:
 
-Some commands are implemented by sending Chrome's normal keyboard shortcuts. Internal pages such as bookmarks, extensions, settings, and About Chrome are opened in a new tab.
+- New Tab
+- New Window / InPrivate Window
+- Open File
+- Save Page
+- Print
+- Undo / Redo
+- Cut / Copy / Paste
+- Reload
+- Zoom
+- Full Screen
+- Page Source
+- History
+- Downloads
+- Bookmarks / Favorites
+- Extensions
+- Settings
+- Help
+- About Browser
 
-## Dark menu mode
+Most commands use the browser's native keyboard shortcuts. Browser-specific pages automatically open using the correct internal URL for Chrome or Edge.
 
-Open **View → Dark Menu Mode** to switch between the custom dark menu and the normal system menu colours. The setting is active for the current loaded mod session.
+## Dark Menu Mode
 
-## Source layout
+Select **View → Dark Menu Mode** to switch between the custom dark menu theme and the standard Windows menu colours.
+
+The selected mode remains active while the mod is loaded.
+
+## Source Layout
 
 ```text
-src/chrome-classic-menu-bar.wh.cpp       Main Windhawk mod source
-windhawk-submission/mods/                Copy prepared for Windhawk pull request
-.github/                                 GitHub templates and validation workflow
-docs/                                    Installation and technical notes
-screenshots/                             Place project screenshots here
+src/chrome-classic-menu-bar.wh.cpp
+    Main Windhawk source.
+
+windhawk-submission/mods/
+    Copy prepared for Windhawk submission.
+
+.github/
+    GitHub workflows and templates.
+
+docs/
+    Documentation.
+
+screenshots/
+    Project screenshots.
 ```
 
 ## Screenshots
 
-Add your screenshots to the `screenshots` directory and update this section before publishing images publicly.
+Suggested screenshots:
 
-Suggested files:
+- Chrome Dark Menu
+- Chrome Light Menu
+- Edge Dark Menu
+- Edge Light Menu
+- File Menu
+- Tools Menu
 
-- `chrome-dark-menu.png`
-- `chrome-light-menu.png`
-- `file-menu.png`
-- `tools-menu.png`
+## Known Limitations
 
-## Known limitations
-
-- Chrome can change its native window implementation, which may require future compatibility updates.
-- Commands based on synthetic keyboard input depend on Chrome retaining the corresponding shortcuts.
-- The dark-mode choice is not currently persisted between mod reloads.
-- The mod is designed specifically for `chrome.exe`; Chromium-based browsers with different executable names are not included.
+- Future Chromium updates may require compatibility adjustments.
+- Commands implemented through keyboard shortcuts depend on those shortcuts remaining unchanged.
+- Dark Menu Mode is currently session-based and is not persisted between mod reloads.
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+Pull requests, bug reports, and feature suggestions are welcome.
+
+Please read **CONTRIBUTING.md** before submitting changes.
 
 ## Security
 
-See [SECURITY.md](SECURITY.md) for responsible reporting instructions.
+Please see **SECURITY.md** for responsible vulnerability reporting.
 
 ## Author
 
-Created by **Gokhan** — GitHub: **GokhanGerkz**.
+Created by **Gokhan**
+
+GitHub: https://github.com/GokhanGerkz
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the **MIT License**.
