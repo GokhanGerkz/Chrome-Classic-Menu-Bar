@@ -3,9 +3,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue)](#requirements)
 [![Language](https://img.shields.io/badge/language-C%2B%2B-blue)](src/chrome-classic-menu-bar.wh.cpp)
+[![Version](https://img.shields.io/badge/version-1.1.0-brightgreen)](CHANGELOG.md)
 [![Windhawk Mod](https://img.shields.io/badge/Windhawk-mod-4b7bec)](https://windhawk.net/)
 
 A Windhawk mod that adds a native Win32 **File, Edit, View, History, Bookmarks/Favorites, Tools, and Help** menu bar to **Google Chrome** and **Microsoft Edge**.
+
+## Releases
+
+See [CHANGELOG.md](CHANGELOG.md) for the complete list of releases and upgrade notes.
 
 ## Features
 
